@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RSVP | Aleasha & Milton</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="scripts.js"></script>
+  <style>
+    /* RSVP PAGE STYLES */
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      color: #0e3b43;
+    }
+
+    .rsvp-section {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+    }
+
+    /* Oval Coconut White Box with Gold Foil Frame */
+    .rsvp-box {
+      background: rgba(255, 255, 245, 0.55); /* coconut white */
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 49%;
+      padding: 100px 50px;
+      max-width: 600px;
+      width: 200%;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 8px 35px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      animation: fadeIn 1.5s ease;
+    }
+
+    /* Gold foil frame */
+    .rsvp-box::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border-radius: 60%;
+      z-index: -1;
+      background: url('images/gold-foil.png') no-repeat center center;
+      background-size: cover;
+      mask: radial-gradient(circle at center, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
+      -webkit-mask: radial-gradient(circle at center, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
+    }
+
+    .rsvp-section h2 {
+      font-family: "Ballet", cursive;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .rsvp-section p {
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+    }
+
+    .rsvp-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .rsvp-form label {
+      font-weight: 500;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    .rsvp-form input,
+    .rsvp-form select,
+    .rsvp-form textarea {
+      padding: 10px 15px;
+      border-radius: 10px;
+      border: 1px solid #b3d1cf;
+      font-size: 1rem;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    .rsvp-form button {
+      background-color: #0e3b43;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 12px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .rsvp-form button:hover {
+      background-color: #88b7b5;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+      .rsvp-box {
+        border-radius: 30px;
+        padding: 40px 25px;
+      }
+      .rsvp-box::before {
+        border-radius: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">"Two become One" - Ephesians 5:31</div>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="rsvp-section">
+    <div class="rsvp-box">
+      <h2>Rsvp</h2>
+      <p>Please let us know if you’ll be joining our ceremony!</p>
+      <p>Por favor, háganos saber si asistirá a nuestra ceremonia.</p>
+
+      <form action="https://formspree.io/f/xgvnnyqz" method="POST" class="rsvp-form">
+        <label for="name">Name | Nombre</label>
+        <input type="text" name="name" required />
+
+        <label for="email">Email (required to receive confirmation) | Correo electrónico (requerido para recibir confirmación)</label>
+        <input type="email" name="_replyto" required />
+
+        <label>Will you be attending? | ¿Confirmas tu asistencia?</label>
+        <select name="attendance" required>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+
+        <label>Message (optional)</label>
+        <textarea name="message" rows="4"></textarea>
+
+        <button type="submit">Send RSVP</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>Thank you for celebrating with us</p>
+  </footer>
+</body>
+</html>
+

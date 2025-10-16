@@ -1,0 +1,204 @@
+/* ===== IMPORT FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Playfair+Display:wght@400;500;700&display=swap');
+
+/* ===== BASE STYLES ===== */
+body {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  background: 
+    url('./images/orchid1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #222;
+  overflow-x: hidden;
+}
+
+/* ===== NAVIGATION ===== */
+header {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-family: "Ballet", cursive;
+  font-size: 2.5rem;
+  color: #0e3b43;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #0e3b43;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #4fa5a2;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #0e3b43;
+  position: relative;
+  padding: 2rem;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2px);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 2s ease;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ===== FONT STYLES ===== */
+.hero h1 {
+  font-family: "Ballet", cursive;
+  font-size: 4rem;
+  margin-bottom: 0.3rem;
+  color: #0e3b43;
+}
+
+.hero h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #3b5858;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #3b5858;
+}
+
+.date {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #265d5b;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  background-color: #0e3b43;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 30px;
+  border: none;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #4fa5a2;
+  transform: translateY(-2px);
+}
+
+/* ===== CONTENT SECTIONS ===== */
+.content-section {
+  padding: 60px 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.7);
+  margin: 40px auto;
+  border-radius: 20px;
+  max-width: 1000px;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.08);
+  animation: fadeInUp 1.5s ease;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  color: #0e3b43;
+  margin-bottom: 20px;
+}
+
+h3, h4 {
+  font-family: "Playfair Display", serif;
+}
+
+/* ===== SPECIAL: COUPLE NAMES ===== */
+.couple-names {
+  font-family: "Ballet", cursive;
+  font-size: 3.5rem;
+  color: #0e3b43;
+  margin: 0;
+}
+
+/* ===== RSVP FORM ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Inputs: smaller width, bold text, blue-green glow & shadow */
+input, select, textarea {
+  width: 50%;                           /* smaller width */
+  max-width: 350px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.7);     /* black border */
+  background: rgba(255, 255, 255, 0.7);       /* translucent coconut-white */
+  font-family: "Playfair Display", serif;
+  font-weight: 600;                     /* bold text */
+  font-size: 1rem;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.7), /* soft teal shadow */
+              0 0 12px rgba(0, 0, 10, 0.9);    /* glow effect */
+  transition: all 0.3s ease;
+}
+
+/* Hover and focus effects */
+input:focus, select:f
+
+
+
+
+
+
